@@ -31,14 +31,6 @@ print("Costs of assigning machines: " + str(costs))
 print("Capacity required to use machine: " + str(capacity_req))
 print("Capacity of the machines: " + str(capacity_mac))
 
-#one job per machine
-#machine capacity can not be exceded by the jobs assigned
-
-#hitta maskinen som gör det billigaste jobbet av alla jobb och updatera kapaciteten och märk jobbet som klart
-#sätt den maskinen på det jobbet
-#hitta näst billigaste som inte är samma jobb som den tidigare
-#fortsätt tills alla maskiner är upptagna
-
 used_cap = np.zeros(m, dtype=int)
 assigned_machine = np.zeros(n, dtype=int)
 use_cost = np.zeros(n, dtype=int)
@@ -51,14 +43,13 @@ for j in range(n): # for all jobs
             cheapest = costs[i][j]
             cheapest_machine = i
     assigned_machine[j] = cheapest_machine
-    used_cap[cheapest_machine] = capacity_req[cheapest_machine][j]
+    used_cap[cheapest_machine] += capacity_req[cheapest_machine][j]
     use_cost[j] = cheapest
 
 
 print("Capacity used for the machine: " + str(used_cap))
 print("Machine assigned to job: " + str(assigned_machine))
 print("Total cost: " + str(sum(use_cost)))
-
 
 
 

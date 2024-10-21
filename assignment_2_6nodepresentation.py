@@ -78,7 +78,18 @@ print('Dist: ' + str(h[0]))
 print('V:    ' + str(v))
 print('Path: ' + str(h[1]))
 
-nx.draw(G,with_labels=True, node_size=100, linewidths=10, arrowsize=30)
+pos = {
+    0:(0, 0),
+    1:(1, 3),
+    2:(2, 5),
+    3:(3, 7),
+    4:(4, 5),
+    5:(5, 3),
+    6:(6, 0)
+}
+
+nx.draw(G,pos,with_labels=True, node_size=100, linewidths=10, arrowsize=30)
 edge_labels= dict([((n1,n2), d['weight'])
                    for n1,n2,d in G.edges(data=True)])
+nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels)
 plt.show()
