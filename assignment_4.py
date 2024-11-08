@@ -12,7 +12,7 @@ def read_input(text_file):
             inp_mat.append(a)
     return inp_mat
 
-inp = read_input('GAP_1.txt')
+inp = read_input('GAP_2.txt')
 print("Raw input: " + str(inp))
 
 

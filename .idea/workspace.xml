@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c4f0922-e90d-45d3-a138-7ce854573a6b" name="Changes" comment="v1">
-      <change afterPath="$PROJECT_DIR$/assignment_4_exhaustive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,7 @@
     "Python.assignment_3.executor": "Run",
     "Python.assignment_4.executor": "Run",
     "Python.assignment_4_exhaustive.executor": "Run",
+    "Python.hw2.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -96,7 +96,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -117,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729397454745</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v1">
+      <option name="closed" value="true" />
+      <created>1729524445294</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729524445294</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

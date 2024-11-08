@@ -67,16 +67,22 @@ lotM = get_coords('lotsizing_n6.txt')
 print(lotM)
 G = graphConstructor(lotM)
 
-
-
 v = list()
+produced = list()
 for i in range(G.number_of_nodes()):
     v.append(i)
+    produced.append(0)
 h = BellmanFord(G,0)
+print(h)
+#print(h[][])
+for i in range(G.number_of_nodes()):
+    produced[h[1][i]] += lotM[h[1][i]+1][0]
 
-print('Dist: ' + str(h[0]))
-print('V:    ' + str(v))
-print('Path: ' + str(h[1]))
+print('Dist:    ' + str(h[0]))
+print('V:       ' + str(v))
+print('Path:    ' + str(h[1]))
+print('Produced ' + str(produced))
+
 
 nx.draw(G,with_labels=True, node_size=100, linewidths=10, arrowsize=30)
 edge_labels= dict([((n1,n2), d['weight'])

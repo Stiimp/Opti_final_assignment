@@ -18,9 +18,8 @@ def kahn(Gr): #takes input of a directed graph from the networkx library
         else:
             inDeg.append(-1)
             k += 1
-    print(inDeg)
     index = 0  # error reference
-    order = []  # the output with the final topological ordering
+    order = []  # the output with the final topological orderingS
     while not q.empty():
         # fills the order list with the node that is in the front of the queue
         at = q.get()
@@ -52,7 +51,7 @@ def graphConstructor(elist):
     nodeAdapt = not(0 in elist)
     H = nx.DiGraph()
     Gr = nx.DiGraph()
-    for i in range(len(elist)-1):
+    for i in range(len(elist)):
         if len(elist[i]) == 1:
             continue
         else:
@@ -67,7 +66,6 @@ def graphConstructor(elist):
 edgeList = get_coords('node_info.txt')
 print(edgeList)
 G = graphConstructor(edgeList)
-print(G.nodes)
 print('The topological order of the graph is: ' + str(kahn(G)))
 
 pos = nx.planar_layout(G)

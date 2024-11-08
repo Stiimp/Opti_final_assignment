@@ -54,3 +54,20 @@ for j in items:
     if selected_separation[j].value() > 0:
         print(f"Item {j + 1} is selected (separated), value: {selected_separation[j].value()}")
 print("Max value: ", value(prob_separation.objective))
+
+prob_cover = p.LpProblem('problem_cover', p.LpMaximize)
+#vaiable
+selected_cover = LpVariable.dicts("selected_cover", items, cat="Binary")
+#objective
+prob_cover += lpSum(objective_coef[j] * selected_cover[j] for j in items)
+#constraint
+prob_cover += lpSum(selected_cover[j] * constraint_coef[j] for j in items) <= constr
+cover_set = [j for j in items if selected_separation[j].value() == 1]
+prob_cover += lpSum(selected_cover[j] * selected_separation[j].value() for j in items) <= len(cover_set) - 1
+
+prob_cover.solve()
+print(cover_set)
+for j in items:
+    if selected_cover[j].value() > 0:
+        print(f"Item {j + 1} is selected (cover), value: {selected_cover[j].value()}")
+print("Max value: ", value(prob_cover.objective))
